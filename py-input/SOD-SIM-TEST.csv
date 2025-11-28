@@ -1,0 +1,3 @@
+﻿env,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Transmisson,F43_3_CountryCode,TXN_CODE,Terminal ID,POS Entry Mode,MOTOCode
+UAT2,4548520800018069,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05,07
+UAT2,4548520800018044,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05,

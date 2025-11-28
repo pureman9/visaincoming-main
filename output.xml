@@ -1,0 +1,3246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.1 on win32)" generated="2025-11-28T09:53:59.635906" rpa="false" schemaversion="5">
+<suite id="s1" name="Mobius login" source="d:\visaincoming-main\src\Mobius_login.robot">
+<test id="s1-t1" name="Visa Incoming Authorization Test" line="173">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:53:59.867968" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-28T09:53:59.867667" elapsed="1.180514"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-28T09:54:01.049420" elapsed="0.038698"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:01.089853" level="INFO">Opening url 'https://kong-uat2-pci-clb.int-np.cardx.co.th/mobius'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-28T09:54:01.089178" elapsed="5.971773"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=submitButton</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:07.061631" elapsed="0.446523"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:07.509163" level="INFO">Clicking element 'id=submitButton'.</msg>
+<arg>id=submitButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:07.508797" elapsed="0.196123"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=userID</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:07.705686" elapsed="1.038445"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:08.745360" level="INFO">Typing text '99362CDM22' into text field 'id=userID'.</msg>
+<arg>id=userID</arg>
+<arg>${USER_ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:08.744836" elapsed="0.078408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=submitBtn</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:08.824540" elapsed="0.017207"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:08.843097" level="INFO">Clicking element 'id=submitBtn'.</msg>
+<arg>id=submitBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:08.842786" elapsed="0.277824"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:14.122156" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:09.121557" elapsed="5.000912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:14.123600" elapsed="0.015212"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:14.141001" level="INFO">Typing text 'mobius' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:14.139635" elapsed="0.049013"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=submitBtn</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:14.189284" elapsed="0.013268"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:14.203342" level="INFO">Clicking element 'id=submitBtn'.</msg>
+<arg>id=submitBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:14.203040" elapsed="0.944147"/>
+</kw>
+<kw name="Input secondary password">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>(//div[contains(@class, 'card-pin')]/div)</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.149714" elapsed="0.036117"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:15.195778" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.663")&gt;, &lt;selenium.webdri...</msg>
+<var>${elements}</var>
+<arg>(//div[contains(@class, 'card-pin')]/div)</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.186178" elapsed="0.009787"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:15.204684" level="INFO">${class} = input-area  dark-bg </msg>
+<var>${class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.196686" elapsed="0.008181"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.205269" elapsed="0.000137"/>
+</kw>
+<msg time="2025-11-28T09:54:15.205484" level="INFO">${is_enabled} = True</msg>
+<var>${is_enabled}</var>
+<arg>Should Not Contain</arg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.205066" elapsed="0.000462"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_enabled}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:15.205923" level="INFO">${xpath_index} = 1</msg>
+<var>${xpath_index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.205748" elapsed="0.000242"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:15.206277" level="INFO">${new_xpath} = (//div[contains(@class, 'card-pin')]/div/input)[1]</msg>
+<var>${new_xpath}</var>
+<arg>SEPARATOR=</arg>
+<arg>(//div[contains(@class, 'card-pin')]/div/input)[</arg>
+<arg>${xpath_index}</arg>
+<arg>]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.206072" elapsed="0.000304"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.206530" elapsed="0.014891"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:16.223034" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:15.222058" elapsed="1.001446"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:16.224468" level="INFO">Typing text 'A' into text field '(//div[contains(@class, 'card-pin')]/div/input)[1]'.</msg>
+<arg>${new_xpath}</arg>
+<arg>${2nd_password}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.223860" elapsed="0.071685"/>
+</kw>
+<status status="PASS" start="2025-11-28T09:54:15.205623" elapsed="1.090545"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:15.205597" elapsed="1.090766"/>
+</if>
+<var name="${index}">0</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.663")&gt;</var>
+<status status="PASS" start="2025-11-28T09:54:15.196469" elapsed="1.099943"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:16.304444" level="INFO">${class} = input-area  dark-bg </msg>
+<var>${class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.297178" elapsed="0.007460"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.305107" elapsed="0.000193"/>
+</kw>
+<msg time="2025-11-28T09:54:16.305435" level="INFO">${is_enabled} = True</msg>
+<var>${is_enabled}</var>
+<arg>Should Not Contain</arg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.304866" elapsed="0.000623"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_enabled}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:16.306092" level="INFO">${xpath_index} = 2</msg>
+<var>${xpath_index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.305837" elapsed="0.000370"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:16.306579" level="INFO">${new_xpath} = (//div[contains(@class, 'card-pin')]/div/input)[2]</msg>
+<var>${new_xpath}</var>
+<arg>SEPARATOR=</arg>
+<arg>(//div[contains(@class, 'card-pin')]/div/input)[</arg>
+<arg>${xpath_index}</arg>
+<arg>]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.306376" elapsed="0.000279"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.306788" elapsed="0.018882"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:17.326584" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:16.326023" elapsed="1.000921"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:17.327572" level="INFO">Typing text 'b' into text field '(//div[contains(@class, 'card-pin')]/div/input)[2]'.</msg>
+<arg>${new_xpath}</arg>
+<arg>${2nd_password}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.327204" elapsed="0.042002"/>
+</kw>
+<status status="PASS" start="2025-11-28T09:54:16.305616" elapsed="1.063810"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:16.305586" elapsed="1.063939"/>
+</if>
+<var name="${index}">1</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.666")&gt;</var>
+<status status="PASS" start="2025-11-28T09:54:16.296859" elapsed="1.072693"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:17.376132" level="INFO">${class} = input-area  dark-bg disabled</msg>
+<var>${class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.370022" elapsed="0.006277"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Contain" owner="BuiltIn">
+<msg time="2025-11-28T09:54:17.376835" level="FAIL">'input-area  dark-bg disabled' contains 'disabled'</msg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-11-28T09:54:17.376659" elapsed="0.000326">'input-area  dark-bg disabled' contains 'disabled'</status>
+</kw>
+<msg time="2025-11-28T09:54:17.377070" level="INFO">${is_enabled} = False</msg>
+<var>${is_enabled}</var>
+<arg>Should Not Contain</arg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.376487" elapsed="0.000617"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_enabled}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${xpath_index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.377295" elapsed="0.000042"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<var>${new_xpath}</var>
+<arg>SEPARATOR=</arg>
+<arg>(//div[contains(@class, 'card-pin')]/div/input)[</arg>
+<arg>${xpath_index}</arg>
+<arg>]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.377415" elapsed="0.000062"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.377630" elapsed="0.000057"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.377760" elapsed="0.000039"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<arg>${2nd_password}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.377865" elapsed="0.000037"/>
+</kw>
+<status status="NOT RUN" start="2025-11-28T09:54:17.377182" elapsed="0.000759"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:17.377164" elapsed="0.000823"/>
+</if>
+<var name="${index}">2</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.669")&gt;</var>
+<status status="PASS" start="2025-11-28T09:54:17.369813" elapsed="0.008189"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:17.384109" level="INFO">${class} = input-area  dark-bg disabled</msg>
+<var>${class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.378241" elapsed="0.006063"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Contain" owner="BuiltIn">
+<msg time="2025-11-28T09:54:17.384961" level="FAIL">'input-area  dark-bg disabled' contains 'disabled'</msg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-11-28T09:54:17.384754" elapsed="0.000320">'input-area  dark-bg disabled' contains 'disabled'</status>
+</kw>
+<msg time="2025-11-28T09:54:17.385175" level="INFO">${is_enabled} = False</msg>
+<var>${is_enabled}</var>
+<arg>Should Not Contain</arg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.384538" elapsed="0.000680"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_enabled}">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${xpath_index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.385698" elapsed="0.000051"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<var>${new_xpath}</var>
+<arg>SEPARATOR=</arg>
+<arg>(//div[contains(@class, 'card-pin')]/div/input)[</arg>
+<arg>${xpath_index}</arg>
+<arg>]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.385837" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.385977" elapsed="0.000044"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.386097" elapsed="0.000078"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<arg>${2nd_password}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:17.386274" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2025-11-28T09:54:17.385525" elapsed="0.000841"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:17.385498" elapsed="0.000931"/>
+</if>
+<var name="${index}">3</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.672")&gt;</var>
+<status status="PASS" start="2025-11-28T09:54:17.378155" elapsed="0.008298"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:17.394252" level="INFO">${class} = input-area  dark-bg </msg>
+<var>${class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.386745" elapsed="0.007785"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.395239" elapsed="0.000490"/>
+</kw>
+<msg time="2025-11-28T09:54:17.395890" level="INFO">${is_enabled} = True</msg>
+<var>${is_enabled}</var>
+<arg>Should Not Contain</arg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.394881" elapsed="0.001083"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_enabled}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:17.396445" level="INFO">${xpath_index} = 5</msg>
+<var>${xpath_index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.396264" elapsed="0.000250"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:17.396728" level="INFO">${new_xpath} = (//div[contains(@class, 'card-pin')]/div/input)[5]</msg>
+<var>${new_xpath}</var>
+<arg>SEPARATOR=</arg>
+<arg>(//div[contains(@class, 'card-pin')]/div/input)[</arg>
+<arg>${xpath_index}</arg>
+<arg>]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.396600" elapsed="0.000179"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.396870" elapsed="0.016200"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:18.414342" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:17.413507" elapsed="1.001357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:18.415877" level="INFO">Typing text '1' into text field '(//div[contains(@class, 'card-pin')]/div/input)[5]'.</msg>
+<arg>${new_xpath}</arg>
+<arg>${2nd_password}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.415261" elapsed="0.069590"/>
+</kw>
+<status status="PASS" start="2025-11-28T09:54:17.396090" elapsed="1.089074"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:17.396063" elapsed="1.089251"/>
+</if>
+<var name="${index}">4</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.675")&gt;</var>
+<status status="PASS" start="2025-11-28T09:54:17.386633" elapsed="1.098722"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:18.493576" level="INFO">${class} = input-area  dark-bg </msg>
+<var>${class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.486211" elapsed="0.007580"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.494288" elapsed="0.000171"/>
+</kw>
+<msg time="2025-11-28T09:54:18.494563" level="INFO">${is_enabled} = True</msg>
+<var>${is_enabled}</var>
+<arg>Should Not Contain</arg>
+<arg>${class}</arg>
+<arg>disabled</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.494045" elapsed="0.000572"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_enabled}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:18.495125" level="INFO">${xpath_index} = 6</msg>
+<var>${xpath_index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.494902" elapsed="0.000835"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:18.496065" level="INFO">${new_xpath} = (//div[contains(@class, 'card-pin')]/div/input)[6]</msg>
+<var>${new_xpath}</var>
+<arg>SEPARATOR=</arg>
+<arg>(//div[contains(@class, 'card-pin')]/div/input)[</arg>
+<arg>${xpath_index}</arg>
+<arg>]</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.495873" elapsed="0.000259"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${new_xpath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.496259" elapsed="0.016526"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:19.513892" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:18.513147" elapsed="1.001200"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:19.515437" level="INFO">Typing text '1' into text field '(//div[contains(@class, 'card-pin')]/div/input)[6]'.</msg>
+<arg>${new_xpath}</arg>
+<arg>${2nd_password}[${index}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:19.514701" elapsed="0.043884"/>
+</kw>
+<status status="PASS" start="2025-11-28T09:54:18.494738" elapsed="1.064081"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:18.494712" elapsed="1.064296"/>
+</if>
+<var name="${index}">5</var>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="f3bb638da509dc675f4c0b19aadd40dd", element="f.2ADE7B2E15C574C2281082A65204B78E.d.F5C5897D7E1657534A9DFB07FF2354C6.e.678")&gt;</var>
+<status status="PASS" start="2025-11-28T09:54:18.485863" elapsed="1.073176"/>
+</iter>
+<var>${index}</var>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2025-11-28T09:54:15.196139" elapsed="4.363006"/>
+</for>
+<arg>${SECONDARY_PW}</arg>
+<doc>the 2nd password input box can be randomly disabled on some digits.
+So we will check first which digit need to be filled in</doc>
+<status status="PASS" start="2025-11-28T09:54:15.148408" elapsed="4.410894"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:21.560601" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:19.559959" elapsed="2.001010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=authenticateBtn</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:21.561820" elapsed="0.016894"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:21.579836" level="INFO">Clicking element 'id=authenticateBtn'.</msg>
+<arg>id=authenticateBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:21.579515" elapsed="1.765871"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//label[text()="Welcome Back"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.346273" elapsed="0.014606"/>
+</kw>
+<kw name="Read CSV Data As List">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-11-28T09:54:23.362579" level="INFO" html="true">Getting file '&lt;a href="file://d:\visaincoming-main\py-input\SOD-SIM-TEST.csv"&gt;d:\visaincoming-main\py-input\SOD-SIM-TEST.csv&lt;/a&gt;'.</msg>
+<msg time="2025-11-28T09:54:23.375899" level="INFO">${csv_content} = ﻿env,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Transmisson...</msg>
+<var>${csv_content}</var>
+<arg>${CSV_FILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.362400" elapsed="0.013771"/>
+</kw>
+<kw name="Split To Lines" owner="String">
+<msg time="2025-11-28T09:54:23.376848" level="INFO">3 lines returned.</msg>
+<msg time="2025-11-28T09:54:23.377257" level="INFO">${lines} = ['\ufeffenv,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Tran...</msg>
+<var>${lines}</var>
+<arg>${csv_content}</arg>
+<doc>Splits the given string to lines.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.376569" elapsed="0.000793"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.377731" level="INFO">${header} = ﻿env,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Transmisson...</msg>
+<var>${header}</var>
+<arg>${lines}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.377519" elapsed="0.000294"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-11-28T09:54:23.378133" level="INFO">${header_list} = ['\ufeffenv', 'F2_Primary_Account_Number', 'F18_Merchant', 'F6_Amount_Cardholder', 'F51_CurrecyCode_Cardholder', 'F4_Amount_Transaction', 'F49_CurrecyCode_Transaction', 'F43_1_Card_AcceptorName', 'App...</msg>
+<var>${header_list}</var>
+<arg>${header}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.377937" elapsed="0.000269"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.378467" level="INFO">${all_data} = []</msg>
+<var>${all_data}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.378326" elapsed="0.000205"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.378764" level="INFO">Length is 3.</msg>
+<msg time="2025-11-28T09:54:23.378862" level="INFO">${line_count} = 3</msg>
+<var>${line_count}</var>
+<arg>${lines}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.378633" elapsed="0.000284"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.379653" level="INFO">${line} = UAT2,4548520800018069,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05</msg>
+<var>${line}</var>
+<arg>${lines}</arg>
+<arg>${i}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.379475" elapsed="0.000248"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.379992" level="INFO">${line_stripped} = UAT2,4548520800018069,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05</msg>
+<var>${line_stripped}</var>
+<arg>${line}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.379836" elapsed="0.000218"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<arg>'${line_stripped}' == ''</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.380163" elapsed="0.000223"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-11-28T09:54:23.380665" level="INFO">${data_list} = ['UAT2', '4548520800018069', '5815', '5000.00', '764', '5000.00', '764', 'Hotels Resorts', '', '2205', 'TH', '05', '00000015', '05']</msg>
+<var>${data_list}</var>
+<arg>${line}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.380503" elapsed="0.000227"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.381084" level="INFO">${row_data} = {}</msg>
+<var>${row_data}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.380854" elapsed="0.000301"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.381403" level="INFO">${index} = 0</msg>
+<var>${index}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.381266" elapsed="0.000426"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.382329" level="INFO">${clean_header} = env</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.382125" elapsed="0.000291"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.382726" level="INFO">${data_value} = UAT2</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.382537" elapsed="0.000292"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.382964" elapsed="0.000208"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.383667" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.383443" elapsed="0.000303"/>
+</kw>
+<var name="${header_item}">﻿env</var>
+<status status="PASS" start="2025-11-28T09:54:23.382015" elapsed="0.001802"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.384276" level="INFO">${clean_header} = F2_Primary_Account_Number</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.384081" elapsed="0.000273"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.384611" level="INFO">${data_value} = 4548520800018069</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.384478" elapsed="0.000184"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.384743" elapsed="0.000119"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.385087" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.384941" elapsed="0.000194"/>
+</kw>
+<var name="${header_item}">F2_Primary_Account_Number</var>
+<status status="PASS" start="2025-11-28T09:54:23.383960" elapsed="0.001223"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.385642" level="INFO">${clean_header} = F18_Merchant</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.385349" elapsed="0.000396"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.386084" level="INFO">${data_value} = 5815</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.385894" elapsed="0.000260"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.386277" elapsed="0.000176"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.386770" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.386575" elapsed="0.000266"/>
+</kw>
+<var name="${header_item}">F18_Merchant</var>
+<status status="PASS" start="2025-11-28T09:54:23.385273" elapsed="0.001638"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.387350" level="INFO">${clean_header} = F6_Amount_Cardholder</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.387169" elapsed="0.000252"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.387699" level="INFO">${data_value} = 5000.00</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.387540" elapsed="0.000222"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.387873" elapsed="0.000158"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.388325" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.388143" elapsed="0.000252"/>
+</kw>
+<var name="${header_item}">F6_Amount_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:23.387038" elapsed="0.001428"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.388874" level="INFO">${clean_header} = F51_CurrecyCode_Cardholder</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.388699" elapsed="0.000243"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.389236" level="INFO">${data_value} = 764</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.389051" elapsed="0.000259"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.389433" elapsed="0.000168"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.389951" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.389721" elapsed="0.000315"/>
+</kw>
+<var name="${header_item}">F51_CurrecyCode_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:23.388587" elapsed="0.001523"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.390533" level="INFO">${clean_header} = F4_Amount_Transaction</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.390357" elapsed="0.000243"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.390861" level="INFO">${data_value} = 5000.00</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.390706" elapsed="0.000215"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.391148" elapsed="0.000232"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.391799" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.391553" elapsed="0.000322"/>
+</kw>
+<var name="${header_item}">F4_Amount_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:23.390241" elapsed="0.001689"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.392511" level="INFO">${clean_header} = F49_CurrecyCode_Transaction</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.392325" elapsed="0.000265"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.392844" level="INFO">${data_value} = 764</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.392701" elapsed="0.000190"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.392973" elapsed="0.000379"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.393590" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.393440" elapsed="0.000200"/>
+</kw>
+<var name="${header_item}">F49_CurrecyCode_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:23.392187" elapsed="0.001501"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.395062" level="INFO">${clean_header} = F43_1_Card_AcceptorName</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.394297" elapsed="0.001017"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.396344" level="INFO">${data_value} = Hotels Resorts</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.395840" elapsed="0.000642"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.396730" elapsed="0.000341"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.397627" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.397291" elapsed="0.000494"/>
+</kw>
+<var name="${header_item}">F43_1_Card_AcceptorName</var>
+<status status="PASS" start="2025-11-28T09:54:23.393961" elapsed="0.003961"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.399344" level="INFO">${clean_header} = Approval Code</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.398856" elapsed="0.000739"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.400244" level="INFO">${data_value} = </msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.399895" elapsed="0.000469"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.400569" elapsed="0.000380"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.401458" level="INFO">${index} = 9</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.401158" elapsed="0.000399"/>
+</kw>
+<var name="${header_item}">Approval Code</var>
+<status status="PASS" start="2025-11-28T09:54:23.398482" elapsed="0.003154"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.402363" level="INFO">${clean_header} = F13_Date_Transmisson</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.402069" elapsed="0.000404"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.402930" level="INFO">${data_value} = 2205</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.402644" elapsed="0.000397"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.403220" elapsed="0.000244"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.403912" level="INFO">${index} = 10</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.403632" elapsed="0.000382"/>
+</kw>
+<var name="${header_item}">F13_Date_Transmisson</var>
+<status status="PASS" start="2025-11-28T09:54:23.401802" elapsed="0.002315"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.404730" level="INFO">${clean_header} = F43_3_CountryCode</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.404471" elapsed="0.000415"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.405315" level="INFO">${data_value} = TH</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.405067" elapsed="0.000344"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.405575" elapsed="0.000263"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.406325" level="INFO">${index} = 11</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.406016" elapsed="0.000430"/>
+</kw>
+<var name="${header_item}">F43_3_CountryCode</var>
+<status status="PASS" start="2025-11-28T09:54:23.404299" elapsed="0.002664"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.408174" level="INFO">${clean_header} = TXN_CODE</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.407673" elapsed="0.000848"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.409117" level="INFO">${data_value} = 05</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.408797" elapsed="0.000418"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.409451" elapsed="0.000199"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.410018" level="INFO">${index} = 12</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.409778" elapsed="0.000329"/>
+</kw>
+<var name="${header_item}">TXN_CODE</var>
+<status status="PASS" start="2025-11-28T09:54:23.407391" elapsed="0.002791"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.410654" level="INFO">${clean_header} = Terminal ID</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.410458" elapsed="0.000267"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.411003" level="INFO">${data_value} = 00000015</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.410840" elapsed="0.000226"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.411177" elapsed="0.000176"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.411645" level="INFO">${index} = 13</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.411462" elapsed="0.000251"/>
+</kw>
+<var name="${header_item}">Terminal ID</var>
+<status status="PASS" start="2025-11-28T09:54:23.410336" elapsed="0.001446"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.412195" level="INFO">${clean_header} = POS Entry Mode</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.412020" elapsed="0.000243"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.412529" level="INFO">${data_value} = 05</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.412376" elapsed="0.000211"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.412692" elapsed="0.000152"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.413121" level="INFO">${index} = 14</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.412953" elapsed="0.000244"/>
+</kw>
+<var name="${header_item}">POS Entry Mode</var>
+<status status="PASS" start="2025-11-28T09:54:23.411902" elapsed="0.001362"/>
+</iter>
+<var>${header_item}</var>
+<value>@{header_list}</value>
+<status status="PASS" start="2025-11-28T09:54:23.381819" elapsed="0.031519"/>
+</for>
+<kw name="Append To List" owner="Collections">
+<arg>${all_data}</arg>
+<arg>${row_data}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.413487" elapsed="0.000151"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-11-28T09:54:23.379350" elapsed="0.034356"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.414146" level="INFO">${line} = UAT2,4548520800018044,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05</msg>
+<var>${line}</var>
+<arg>${lines}</arg>
+<arg>${i}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.413976" elapsed="0.000238"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.414462" level="INFO">${line_stripped} = UAT2,4548520800018044,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05</msg>
+<var>${line_stripped}</var>
+<arg>${line}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.414323" elapsed="0.000202"/>
+</kw>
+<kw name="Continue For Loop If" owner="BuiltIn">
+<arg>'${line_stripped}' == ''</arg>
+<doc>Skips the current FOR loop iteration if the ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.414633" elapsed="0.000246"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-11-28T09:54:23.415272" level="INFO">${data_list} = ['UAT2', '4548520800018044', '5815', '5000.00', '764', '5000.00', '764', 'Hotels Resorts', '', '2205', 'TH', '05', '00000015', '05']</msg>
+<var>${data_list}</var>
+<arg>${line}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.415024" elapsed="0.000670"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.416154" level="INFO">${row_data} = {}</msg>
+<var>${row_data}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.415922" elapsed="0.000327"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.416554" level="INFO">${index} = 0</msg>
+<var>${index}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.416371" elapsed="0.000266"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.417118" level="INFO">${clean_header} = env</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.416963" elapsed="0.000209"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.417399" level="INFO">${data_value} = UAT2</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.417267" elapsed="0.000188"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.417537" elapsed="0.000190"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.418068" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.417873" elapsed="0.000254"/>
+</kw>
+<var name="${header_item}">﻿env</var>
+<status status="PASS" start="2025-11-28T09:54:23.416871" elapsed="0.001309"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.418500" level="INFO">${clean_header} = F2_Primary_Account_Number</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.418366" elapsed="0.000257"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.418924" level="INFO">${data_value} = 4548520800018044</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.418743" elapsed="0.000264"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.419133" elapsed="0.000195"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.419672" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.419464" elapsed="0.000267"/>
+</kw>
+<var name="${header_item}">F2_Primary_Account_Number</var>
+<status status="PASS" start="2025-11-28T09:54:23.418285" elapsed="0.001499"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.420157" level="INFO">${clean_header} = F18_Merchant</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.420018" elapsed="0.000189"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.420407" level="INFO">${data_value} = 5815</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.420292" elapsed="0.000158"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.420530" elapsed="0.000159"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.420900" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.420767" elapsed="0.000177"/>
+</kw>
+<var name="${header_item}">F18_Merchant</var>
+<status status="PASS" start="2025-11-28T09:54:23.419878" elapsed="0.001112"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.421553" level="INFO">${clean_header} = F6_Amount_Cardholder</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.421143" elapsed="0.000473"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.421835" level="INFO">${data_value} = 5000.00</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.421710" elapsed="0.000169"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.421957" elapsed="0.000115"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.422291" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.422150" elapsed="0.000186"/>
+</kw>
+<var name="${header_item}">F6_Amount_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:23.421075" elapsed="0.001435"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.422801" level="INFO">${clean_header} = F51_CurrecyCode_Cardholder</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.422677" elapsed="0.000168"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.423148" level="INFO">${data_value} = 764</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.422936" elapsed="0.000305"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.423367" elapsed="0.000335"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.424079" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.423855" elapsed="0.000286"/>
+</kw>
+<var name="${header_item}">F51_CurrecyCode_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:23.422602" elapsed="0.001609"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.424678" level="INFO">${clean_header} = F4_Amount_Transaction</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.424443" elapsed="0.000320"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.425093" level="INFO">${data_value} = 5000.00</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.424883" elapsed="0.000287"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.425296" elapsed="0.000202"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.425859" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.425620" elapsed="0.000297"/>
+</kw>
+<var name="${header_item}">F4_Amount_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:23.424330" elapsed="0.001643"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.426293" level="INFO">${clean_header} = F49_CurrecyCode_Transaction</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.426153" elapsed="0.000189"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.426634" level="INFO">${data_value} = 764</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.426433" elapsed="0.000273"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.426985" elapsed="0.000188"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.427498" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.427305" elapsed="0.000256"/>
+</kw>
+<var name="${header_item}">F49_CurrecyCode_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:23.426070" elapsed="0.001592"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.428052" level="INFO">${clean_header} = F43_1_Card_AcceptorName</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.427909" elapsed="0.000193"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.428303" level="INFO">${data_value} = Hotels Resorts</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.428184" elapsed="0.000162"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.428424" elapsed="0.000114"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.429110" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.428614" elapsed="0.000726"/>
+</kw>
+<var name="${header_item}">F43_1_Card_AcceptorName</var>
+<status status="PASS" start="2025-11-28T09:54:23.427813" elapsed="0.001660"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.430131" level="INFO">${clean_header} = Approval Code</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.429877" elapsed="0.000334"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.430912" level="INFO">${data_value} = </msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.430353" elapsed="0.000765"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.431247" elapsed="0.000207"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.432498" level="INFO">${index} = 9</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.431966" elapsed="0.000606"/>
+</kw>
+<var name="${header_item}">Approval Code</var>
+<status status="PASS" start="2025-11-28T09:54:23.429668" elapsed="0.003000"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.433268" level="INFO">${clean_header} = F13_Date_Transmisson</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.433024" elapsed="0.000339"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.433599" level="INFO">${data_value} = 2205</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.433463" elapsed="0.000182"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.433726" elapsed="0.000127"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.434090" level="INFO">${index} = 10</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.433934" elapsed="0.000205"/>
+</kw>
+<var name="${header_item}">F13_Date_Transmisson</var>
+<status status="PASS" start="2025-11-28T09:54:23.432879" elapsed="0.001309"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.434489" level="INFO">${clean_header} = F43_3_CountryCode</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.434359" elapsed="0.000174"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.434725" level="INFO">${data_value} = TH</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.434610" elapsed="0.000156"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.434839" elapsed="0.000112"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.435154" level="INFO">${index} = 11</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.435026" elapsed="0.000170"/>
+</kw>
+<var name="${header_item}">F43_3_CountryCode</var>
+<status status="PASS" start="2025-11-28T09:54:23.434284" elapsed="0.000960"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.435652" level="INFO">${clean_header} = TXN_CODE</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.435495" elapsed="0.000215"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.435924" level="INFO">${data_value} = 05</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.435803" elapsed="0.000166"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.436048" elapsed="0.000114"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.436383" level="INFO">${index} = 12</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.436241" elapsed="0.000188"/>
+</kw>
+<var name="${header_item}">TXN_CODE</var>
+<status status="PASS" start="2025-11-28T09:54:23.435364" elapsed="0.001230"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.437078" level="INFO">${clean_header} = Terminal ID</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.436883" elapsed="0.000265"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.437381" level="INFO">${data_value} = 00000015</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.437238" elapsed="0.000187"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.437505" elapsed="0.000117"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.437849" level="INFO">${index} = 13</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.437699" elapsed="0.000197"/>
+</kw>
+<var name="${header_item}">Terminal ID</var>
+<status status="PASS" start="2025-11-28T09:54:23.436762" elapsed="0.001183"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.438247" level="INFO">${clean_header} = POS Entry Mode</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.438117" elapsed="0.000174"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.438498" level="INFO">${data_value} = 05</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.438382" elapsed="0.000157"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.438614" elapsed="0.000125"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.438944" level="INFO">${index} = 14</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.438814" elapsed="0.000173"/>
+</kw>
+<var name="${header_item}">POS Entry Mode</var>
+<status status="PASS" start="2025-11-28T09:54:23.438044" elapsed="0.000988"/>
+</iter>
+<var>${header_item}</var>
+<value>@{header_list}</value>
+<status status="PASS" start="2025-11-28T09:54:23.416716" elapsed="0.022368"/>
+</for>
+<kw name="Append To List" owner="Collections">
+<arg>${all_data}</arg>
+<arg>${row_data}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.439183" elapsed="0.000106"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-11-28T09:54:23.413869" elapsed="0.025467"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>${line_count}</value>
+<status status="PASS" start="2025-11-28T09:54:23.379039" elapsed="0.060349"/>
+</for>
+<return>
+<value>${all_data}</value>
+<status status="PASS" start="2025-11-28T09:54:23.439465" elapsed="0.000079"/>
+</return>
+<msg time="2025-11-28T09:54:23.439683" level="INFO">${all_data} = [{'env': 'UAT2', 'F2_Primary_Account_Number': '4548520800018069', 'F18_Merchant': '5815', 'F6_Amount_Cardholder': '5000.00', 'F51_CurrecyCode_Cardholder': '764', 'F4_Amount_Transaction': '5000.00', 'F...</msg>
+<var>${all_data}</var>
+<doc>Read CSV file and return all rows as a list of dictionaries</doc>
+<status status="PASS" start="2025-11-28T09:54:23.361890" elapsed="0.077862"/>
+</kw>
+<kw name="Read CSV Data Single Row">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-11-28T09:54:23.441943" level="INFO" html="true">Getting file '&lt;a href="file://d:\visaincoming-main\py-input\SOD-SIM-TEST.csv"&gt;d:\visaincoming-main\py-input\SOD-SIM-TEST.csv&lt;/a&gt;'.</msg>
+<msg time="2025-11-28T09:54:23.442455" level="INFO">${csv_content} = ﻿env,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Transmisson...</msg>
+<var>${csv_content}</var>
+<arg>${CSV_FILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.441754" elapsed="0.000794"/>
+</kw>
+<kw name="Split To Lines" owner="String">
+<msg time="2025-11-28T09:54:23.442846" level="INFO">3 lines returned.</msg>
+<msg time="2025-11-28T09:54:23.442948" level="INFO">${lines} = ['\ufeffenv,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Tran...</msg>
+<var>${lines}</var>
+<arg>${csv_content}</arg>
+<doc>Splits the given string to lines.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.442690" elapsed="0.000323"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.443280" level="INFO">${header} = ﻿env,F2_Primary_Account_Number,F18_Merchant,F6_Amount_Cardholder,F51_CurrecyCode_Cardholder,F4_Amount_Transaction,F49_CurrecyCode_Transaction,F43_1_Card_AcceptorName,Approval Code,F13_Date_Transmisson...</msg>
+<var>${header}</var>
+<arg>${lines}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.443128" elapsed="0.000214"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.443615" level="INFO">${data_line} = UAT2,4548520800018069,5815,5000.00,764,5000.00,764,Hotels Resorts,,2205,TH,05,00000015,05</msg>
+<var>${data_line}</var>
+<arg>${lines}</arg>
+<arg>${row_index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.443449" elapsed="0.000229"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-11-28T09:54:23.443940" level="INFO">${header_list} = ['\ufeffenv', 'F2_Primary_Account_Number', 'F18_Merchant', 'F6_Amount_Cardholder', 'F51_CurrecyCode_Cardholder', 'F4_Amount_Transaction', 'F49_CurrecyCode_Transaction', 'F43_1_Card_AcceptorName', 'App...</msg>
+<var>${header_list}</var>
+<arg>${header}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.443787" elapsed="0.000211"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-11-28T09:54:23.444604" level="INFO">${data_list} = ['UAT2', '4548520800018069', '5815', '5000.00', '764', '5000.00', '764', 'Hotels Resorts', '', '2205', 'TH', '05', '00000015', '05']</msg>
+<var>${data_list}</var>
+<arg>${data_line}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.444102" elapsed="0.000563"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.444949" level="INFO">${csv_data} = {}</msg>
+<var>${csv_data}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.444791" elapsed="0.000226"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.445250" level="INFO">${index} = 0</msg>
+<var>${index}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.445121" elapsed="0.000183"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.446003" level="INFO">${clean_header} = env</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.445822" elapsed="0.000248"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.446348" level="INFO">${data_value} = UAT2</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.446185" elapsed="0.000223"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.446515" elapsed="0.000154"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.446987" level="INFO">${index} = 1</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.446775" elapsed="0.000283"/>
+</kw>
+<var name="${header_item}">﻿env</var>
+<status status="PASS" start="2025-11-28T09:54:23.445710" elapsed="0.001418"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.447607" level="INFO">${clean_header} = F2_Primary_Account_Number</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.447401" elapsed="0.000280"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.448052" level="INFO">${data_value} = 4548520800018069</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.447823" elapsed="0.000303"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.448257" elapsed="0.000237"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.448889" level="INFO">${index} = 2</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.448634" elapsed="0.000326"/>
+</kw>
+<var name="${header_item}">F2_Primary_Account_Number</var>
+<status status="PASS" start="2025-11-28T09:54:23.447270" elapsed="0.001818"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.449665" level="INFO">${clean_header} = F18_Merchant</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.449436" elapsed="0.000345"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.450086" level="INFO">${data_value} = 5815</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.449904" elapsed="0.000252"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.450403" elapsed="0.000175"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.450932" level="INFO">${index} = 3</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.450706" elapsed="0.000302"/>
+</kw>
+<var name="${header_item}">F18_Merchant</var>
+<status status="PASS" start="2025-11-28T09:54:23.449292" elapsed="0.001788"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.451522" level="INFO">${clean_header} = F6_Amount_Cardholder</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.451340" elapsed="0.000250"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.451858" level="INFO">${data_value} = 5000.00</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.451703" elapsed="0.000215"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.452025" elapsed="0.000164"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.452496" level="INFO">${index} = 4</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.452296" elapsed="0.000274"/>
+</kw>
+<var name="${header_item}">F6_Amount_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:23.451211" elapsed="0.001433"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.453067" level="INFO">${clean_header} = F51_CurrecyCode_Cardholder</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.452883" elapsed="0.000247"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.453435" level="INFO">${data_value} = 764</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.453257" elapsed="0.000236"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.453574" elapsed="0.000121"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.453912" level="INFO">${index} = 5</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.453770" elapsed="0.000186"/>
+</kw>
+<var name="${header_item}">F51_CurrecyCode_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:23.452772" elapsed="0.001231"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.454280" level="INFO">${clean_header} = F4_Amount_Transaction</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.454158" elapsed="0.000164"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.454738" level="INFO">${data_value} = 5000.00</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.454396" elapsed="0.000419"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.454912" elapsed="0.000194"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.455425" level="INFO">${index} = 6</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.455224" elapsed="0.000261"/>
+</kw>
+<var name="${header_item}">F4_Amount_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:23.454088" elapsed="0.001454"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.455950" level="INFO">${clean_header} = F49_CurrecyCode_Transaction</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.455744" elapsed="0.000277"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.456247" level="INFO">${data_value} = 764</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.456114" elapsed="0.000201"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.456716" elapsed="0.000877"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.458474" level="INFO">${index} = 7</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.458067" elapsed="0.000514"/>
+</kw>
+<var name="${header_item}">F49_CurrecyCode_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:23.455647" elapsed="0.003025"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.459186" level="INFO">${clean_header} = F43_1_Card_AcceptorName</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.458977" elapsed="0.000281"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.459555" level="INFO">${data_value} = Hotels Resorts</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.459382" elapsed="0.000238"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.459736" elapsed="0.000192"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.460259" level="INFO">${index} = 8</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.460055" elapsed="0.000272"/>
+</kw>
+<var name="${header_item}">F43_1_Card_AcceptorName</var>
+<status status="PASS" start="2025-11-28T09:54:23.458823" elapsed="0.001573"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.460782" level="INFO">${clean_header} = Approval Code</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.460616" elapsed="0.000226"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.461116" level="INFO">${data_value} = </msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.460954" elapsed="0.000219"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.461283" elapsed="0.000166"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.461746" level="INFO">${index} = 9</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.461562" elapsed="0.000265"/>
+</kw>
+<var name="${header_item}">Approval Code</var>
+<status status="PASS" start="2025-11-28T09:54:23.460513" elapsed="0.001385"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.462292" level="INFO">${clean_header} = F13_Date_Transmisson</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.462119" elapsed="0.000234"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.462618" level="INFO">${data_value} = 2205</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.462461" elapsed="0.000213"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.462779" elapsed="0.000152"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.463213" level="INFO">${index} = 10</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.463041" elapsed="0.000231"/>
+</kw>
+<var name="${header_item}">F13_Date_Transmisson</var>
+<status status="PASS" start="2025-11-28T09:54:23.462017" elapsed="0.001319"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.463707" level="INFO">${clean_header} = F43_3_CountryCode</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.463546" elapsed="0.000219"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.464091" level="INFO">${data_value} = TH</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.463937" elapsed="0.000206"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.464237" elapsed="0.000212"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.464943" level="INFO">${index} = 11</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.464684" elapsed="0.000361"/>
+</kw>
+<var name="${header_item}">F43_3_CountryCode</var>
+<status status="PASS" start="2025-11-28T09:54:23.463451" elapsed="0.001676"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.465554" level="INFO">${clean_header} = TXN_CODE</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.465367" elapsed="0.000254"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.465958" level="INFO">${data_value} = 05</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.465735" elapsed="0.000299"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.466163" elapsed="0.000498"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.466960" level="INFO">${index} = 12</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.466784" elapsed="0.000229"/>
+</kw>
+<var name="${header_item}">TXN_CODE</var>
+<status status="PASS" start="2025-11-28T09:54:23.465257" elapsed="0.001805"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.467364" level="INFO">${clean_header} = Terminal ID</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.467232" elapsed="0.000178"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.467602" level="INFO">${data_value} = 00000015</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.467489" elapsed="0.000154"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.467717" elapsed="0.000111"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.468040" level="INFO">${index} = 13</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.467904" elapsed="0.000179"/>
+</kw>
+<var name="${header_item}">Terminal ID</var>
+<status status="PASS" start="2025-11-28T09:54:23.467156" elapsed="0.000974"/>
+</iter>
+<iter>
+<kw name="Strip String" owner="String">
+<msg time="2025-11-28T09:54:23.468577" level="INFO">${clean_header} = POS Entry Mode</msg>
+<var>${clean_header}</var>
+<arg>${header_item}</arg>
+<arg>characters=\ufeff</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.468398" elapsed="0.000233"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-28T09:54:23.468867" level="INFO">${data_value} = 05</msg>
+<var>${data_value}</var>
+<arg>${data_list}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.468735" elapsed="0.000176"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${csv_data}</arg>
+<arg>${clean_header}</arg>
+<arg>${data_value}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.468990" elapsed="0.000119"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:23.469348" level="INFO">${index} = 14</msg>
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.469187" elapsed="0.000208"/>
+</kw>
+<var name="${header_item}">POS Entry Mode</var>
+<status status="PASS" start="2025-11-28T09:54:23.468243" elapsed="0.001208"/>
+</iter>
+<var>${header_item}</var>
+<value>@{header_list}</value>
+<status status="PASS" start="2025-11-28T09:54:23.445522" elapsed="0.023989"/>
+</for>
+<return>
+<value>${csv_data}</value>
+<status status="PASS" start="2025-11-28T09:54:23.469598" elapsed="0.000071"/>
+</return>
+<msg time="2025-11-28T09:54:23.469798" level="INFO">${row} = {'env': 'UAT2', 'F2_Primary_Account_Number': '4548520800018069', 'F18_Merchant': '5815', 'F6_Amount_Cardholder': '5000.00', 'F51_CurrecyCode_Cardholder': '764', 'F4_Amount_Transaction': '5000.00', 'F4...</msg>
+<var>${row}</var>
+<doc>Read CSV file and return first data row as dictionary</doc>
+<status status="PASS" start="2025-11-28T09:54:23.441323" elapsed="0.028530"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[text()='Account']</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:23.471020" elapsed="0.638053"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:24.109636" level="INFO">Clicking element '//a[text()='Account']'.</msg>
+<arg>//a[text()='Account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:24.109390" elapsed="0.045895"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h4[span[contains(text(),'Account Overview &amp; Maintenance')]]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:24.155731" elapsed="0.016227"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:24.172462" level="INFO">Clicking element '//h4[span[contains(text(),'Account Overview &amp; Maintenance')]]'.</msg>
+<arg>//h4[span[contains(text(),'Account Overview &amp; Maintenance')]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:24.172237" elapsed="0.066241"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:26.239126" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:24.238766" elapsed="2.000724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h3[contains(text(),'Account Overview &amp; Maintenance')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.239768" elapsed="0.015850"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-28T09:54:26.256213" level="INFO">${processed_data} = []</msg>
+<var>${processed_data}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.255936" elapsed="0.000398"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:26.256706" level="INFO">${account_num} = 4548520800018069</msg>
+<var>${account_num}</var>
+<arg>${row}[F2_Primary_Account_Number]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.256483" elapsed="0.000311"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Primary Account Number: ${row}[F2_Primary_Account_Number]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.257143" elapsed="0.000674"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=cardNo</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.258334" elapsed="0.014232"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=cardNo</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.272940" elapsed="0.277821"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:26.551334" level="INFO">Clicking element 'id=cardNo'.</msg>
+<arg>id=cardNo</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.551077" elapsed="0.052395"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:26.604198" level="INFO">Typing text '4548520800018069' into text field 'id=cardNo'.</msg>
+<arg>id=cardNo</arg>
+<arg>${account_num}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.603836" elapsed="0.067711"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="searchBtn"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.671887" elapsed="0.016918"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:26.689367" level="INFO">Clicking element '//*[@id="searchBtn"]'.</msg>
+<arg>//*[@id="searchBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.689110" elapsed="0.073449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="accountSearchTable"]/tbody/tr/td[4]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.762940" elapsed="0.017171"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:26.780930" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="accountSearchTable"]/tbody/tr/td[4]'.</msg>
+<arg>xpath=//*[@id="accountSearchTable"]/tbody/tr/td[4]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:26.780545" elapsed="0.286795"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:27.568189" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:27.067718" elapsed="0.500790"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:27.569449" level="INFO">Clicking element '//*[@id="accountSearchTable"]/tbody/tr/td[4]'.</msg>
+<arg>//*[@id="accountSearchTable"]/tbody/tr/td[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:27.568949" elapsed="0.051168"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:27.620470" elapsed="3.139253"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:30.760136" elapsed="0.281533"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:31.042277" level="INFO">Clicking element '//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i'.</msg>
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.042008" elapsed="0.051502"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/div/div/input</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.093858" elapsed="0.017611"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:31.112038" level="INFO">Typing text 'Auth' into text field 'xpath=//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/div/div/input'.</msg>
+<arg>xpath=//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/div/div/input</arg>
+<arg>Auth</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.111766" elapsed="0.059104"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.171301" elapsed="0.010999"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.183186" elapsed="0.270601"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:31.454360" level="INFO">Clicking element '//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a'.</msg>
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.454106" elapsed="0.063704"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-28T09:54:31.518116" elapsed="2.600637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.119114" elapsed="0.015018"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.134472" elapsed="0.283064"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//td[text()='No data available']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.418074" elapsed="0.222939"/>
+</kw>
+<msg time="2025-11-28T09:54:34.641605" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//td[text()='No data available']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.417853" elapsed="0.223908"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_visible}==${FALSE}">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.642283" elapsed="0.000059"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.642442" elapsed="0.000301"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.643057" elapsed="0.000312"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${Authorization_code}</var>
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.643592" elapsed="0.000103"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Authorization_code}'==''">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Authorization Code element not found. Skipping...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.643967" elapsed="0.000058"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row}</arg>
+<arg>Approval Code</arg>
+<arg>${EMPTY}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.644111" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2025-11-28T09:54:34.643805" elapsed="0.000401"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Authorization Result: ${Authorization_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.644330" elapsed="0.000041"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row}</arg>
+<arg>Approval Code</arg>
+<arg>${Authorization_code}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.644437" elapsed="0.000040"/>
+</kw>
+<status status="NOT RUN" start="2025-11-28T09:54:34.644255" elapsed="0.000263"/>
+</branch>
+<status status="NOT RUN" start="2025-11-28T09:54:34.643787" elapsed="0.000769"/>
+</if>
+<kw name="Append To List" owner="Collections">
+<arg>${processed_data}</arg>
+<arg>${row}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:34.644597" elapsed="0.000036"/>
+</kw>
+<status status="NOT RUN" start="2025-11-28T09:54:34.641929" elapsed="0.002744"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:34.641896" elapsed="0.002814"/>
+</if>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[text()='Account']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.644755" elapsed="0.276203"/>
+</kw>
+<var name="${row}">{'env': 'UAT2', 'F2_Primary_Account_Number': '4548520800018069', 'F18_Merchant': '5815', 'F6_Amount_Cardholder': '5000.00', 'F51_CurrecyCode_Cardholder': '764', 'F4_Amount_Transaction': '5000.00', 'F4...</var>
+<status status="PASS" start="2025-11-28T09:54:23.470836" elapsed="11.450310"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[text()='Account']</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.921625" elapsed="0.013263"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:34.935680" level="INFO">Clicking element '//a[text()='Account']'.</msg>
+<arg>//a[text()='Account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.935364" elapsed="0.045470"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h4[span[contains(text(),'Account Overview &amp; Maintenance')]]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:34.981121" elapsed="0.026208"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:35.008632" level="INFO">Clicking element '//h4[span[contains(text(),'Account Overview &amp; Maintenance')]]'.</msg>
+<arg>//h4[span[contains(text(),'Account Overview &amp; Maintenance')]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:35.007947" elapsed="0.080608"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:37.089423" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:35.088865" elapsed="2.001204"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h3[contains(text(),'Account Overview &amp; Maintenance')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.090653" elapsed="0.014289"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-28T09:54:37.105461" level="INFO">${processed_data} = []</msg>
+<var>${processed_data}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.105248" elapsed="0.000329"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:37.105888" level="INFO">${account_num} = 4548520800018044</msg>
+<var>${account_num}</var>
+<arg>${row}[F2_Primary_Account_Number]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.105704" elapsed="0.000259"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Primary Account Number: ${row}[F2_Primary_Account_Number]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.106091" elapsed="0.000614"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=cardNo</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.107193" elapsed="0.012993"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=cardNo</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.120539" elapsed="0.276241"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:37.397357" level="INFO">Clicking element 'id=cardNo'.</msg>
+<arg>id=cardNo</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.397097" elapsed="0.048918"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:37.446810" level="INFO">Typing text '4548520800018044' into text field 'id=cardNo'.</msg>
+<arg>id=cardNo</arg>
+<arg>${account_num}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.446447" elapsed="0.064002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="searchBtn"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.510815" elapsed="0.014230"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:37.525935" level="INFO">Clicking element '//*[@id="searchBtn"]'.</msg>
+<arg>//*[@id="searchBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.525514" elapsed="0.055604"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="accountSearchTable"]/tbody/tr/td[4]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.581775" elapsed="0.015188"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:37.597660" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="accountSearchTable"]/tbody/tr/td[4]'.</msg>
+<arg>xpath=//*[@id="accountSearchTable"]/tbody/tr/td[4]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.597358" elapsed="0.275881"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-28T09:54:38.374365" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-28T09:54:37.873686" elapsed="0.501074"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:38.375364" level="INFO">Clicking element '//*[@id="accountSearchTable"]/tbody/tr/td[4]'.</msg>
+<arg>//*[@id="accountSearchTable"]/tbody/tr/td[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:38.375033" elapsed="0.050928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:38.426390" elapsed="4.378712"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:42.805408" elapsed="0.276331"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:43.082449" level="INFO">Clicking element '//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i'.</msg>
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[2]/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.082147" elapsed="0.045896"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/div/div/input</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.128353" elapsed="0.016665"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:43.145564" level="INFO">Typing text 'Auth' into text field 'xpath=//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/div/div/input'.</msg>
+<arg>xpath=//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/div/div/input</arg>
+<arg>Auth</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.145309" elapsed="0.059901"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.205513" elapsed="0.007994"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.213811" elapsed="0.278785"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:43.493173" level="INFO">Clicking element '//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a'.</msg>
+<arg>//*[@id="cardAccountHeader"]/div[2]/div/div[3]/div/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.492914" elapsed="0.055135"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-28T09:54:43.548780" elapsed="2.344416"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:45.893465" elapsed="0.011917"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:45.905657" elapsed="0.283238"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:51.344302" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-28T09:54:51.344616" level="FAIL">Element '//td[text()='No data available']' not visible after 5 seconds.</msg>
+<arg>//td[text()='No data available']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-28T09:54:46.189377" elapsed="5.184952">Element '//td[text()='No data available']' not visible after 5 seconds.</status>
+</kw>
+<msg time="2025-11-28T09:54:51.374722" level="INFO">${is_visible} = False</msg>
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//td[text()='No data available']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-28T09:54:46.189179" elapsed="5.185873"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_visible}==${FALSE}">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.375858" elapsed="0.010801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<arg>${WAIT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.387071" elapsed="0.016619"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.404171" elapsed="0.279939"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-28T09:54:51.701584" level="INFO">${Authorization_code} = 179100</msg>
+<var>${Authorization_code}</var>
+<arg>//*[@id="obAuthorizationDetailTable"]/tbody/tr[1]/td[9]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.684447" elapsed="0.017338"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Authorization_code}'==''">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Authorization Code element not found. Skipping...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:51.702226" elapsed="0.000061"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row}</arg>
+<arg>Approval Code</arg>
+<arg>${EMPTY}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:51.702377" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2025-11-28T09:54:51.701943" elapsed="0.000531"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Authorization Result: ${Authorization_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.702608" elapsed="0.000385"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${row}</arg>
+<arg>Approval Code</arg>
+<arg>${Authorization_code}</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.703389" elapsed="0.000262"/>
+</kw>
+<status status="PASS" start="2025-11-28T09:54:51.702529" elapsed="0.001219"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:51.701918" elapsed="0.001905"/>
+</if>
+<kw name="Append To List" owner="Collections">
+<arg>${processed_data}</arg>
+<arg>${row}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.703901" elapsed="0.000170"/>
+</kw>
+<status status="PASS" start="2025-11-28T09:54:51.375344" elapsed="0.328805"/>
+</branch>
+<status status="PASS" start="2025-11-28T09:54:51.375273" elapsed="0.328945"/>
+</if>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//a[text()='Account']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.704299" elapsed="0.279892"/>
+</kw>
+<var name="${row}">{'env': 'UAT2', 'F2_Primary_Account_Number': '4548520800018044', 'F18_Merchant': '5815', 'F6_Amount_Cardholder': '5000.00', 'F51_CurrecyCode_Cardholder': '764', 'F4_Amount_Transaction': '5000.00', 'F4...</var>
+<status status="PASS" start="2025-11-28T09:54:34.921454" elapsed="17.062930"/>
+</iter>
+<var>${row}</var>
+<value>@{all_data}</value>
+<status status="PASS" start="2025-11-28T09:54:23.470405" elapsed="28.514064"/>
+</for>
+<kw name="Write Data To CSV">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-11-28T09:54:51.986834" level="INFO">${current_date} = 20251128_095451</msg>
+<var>${current_date}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.986423" elapsed="0.000593"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:51.987519" level="INFO">${output_dir} = d:\visaincoming-main\src\..\src\data</msg>
+<var>${output_dir}</var>
+<arg>d:\\visaincoming-main\\src${/}..${/}src${/}data</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.987227" elapsed="0.000368"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:51.987887" level="INFO">${filename} = VisaIncoming_20251128_095451.csv</msg>
+<var>${filename}</var>
+<arg>VisaIncoming_${current_date}.csv</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.987719" elapsed="0.000247"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:51.988276" level="INFO">${full_path} = d:\visaincoming-main\src\..\src\data\VisaIncoming_20251128_095451.csv</msg>
+<var>${full_path}</var>
+<arg>${output_dir}${/}${filename}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.988089" elapsed="0.000252"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-11-28T09:54:51.988709" level="INFO" html="true">Directory '&lt;a href="file://d:\visaincoming-main\src\data"&gt;d:\visaincoming-main\src\data&lt;/a&gt;' already exists.</msg>
+<arg>${output_dir}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.988452" elapsed="0.000363"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-28T09:54:51.989194" level="INFO">@{headers} = [ F2_Primary_Account_Number | F18_Merchant | F6_Amount_Cardholder | F51_CurrecyCode_Cardholder | F4_Amount_Transaction | F49_CurrecyCode_Transaction | F43_1_Card_AcceptorName | Approval Code | F13_Dat...</msg>
+<var>@{headers}</var>
+<arg>F2_Primary_Account_Number</arg>
+<arg>F18_Merchant</arg>
+<arg>F6_Amount_Cardholder</arg>
+<arg>F51_CurrecyCode_Cardholder</arg>
+<arg>F4_Amount_Transaction</arg>
+<arg>F49_CurrecyCode_Transaction</arg>
+<arg>F43_1_Card_AcceptorName</arg>
+<arg>Approval Code</arg>
+<arg>F13_Date_Transmisson</arg>
+<arg>F43_3_CountryCode</arg>
+<arg>TXN_CODE</arg>
+<arg>Terminal ID</arg>
+<arg>POS Entry Mode</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.988935" elapsed="0.000330"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-11-28T09:54:51.992412" level="INFO" html="true">Created file '&lt;a href="file://d:\visaincoming-main\src\data\VisaIncoming_20251128_095451.csv"&gt;d:\visaincoming-main\src\data\VisaIncoming_20251128_095451.csv&lt;/a&gt;'.</msg>
+<arg>${full_path}</arg>
+<arg>${EMPTY}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.989402" elapsed="0.003243"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-28T09:54:51.993414" level="INFO">${line_values} = []</msg>
+<var>${line_values}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.993241" elapsed="0.000255"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:51.995157" level="INFO">${val} = 4548520800018044</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.993838" elapsed="0.001411"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.995388" elapsed="0.000169"/>
+</kw>
+<var name="${col}">F2_Primary_Account_Number</var>
+<status status="PASS" start="2025-11-28T09:54:51.993727" elapsed="0.001904"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:51.996334" level="INFO">${val} = 5815</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.995871" elapsed="0.000536"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.996528" elapsed="0.000145"/>
+</kw>
+<var name="${col}">F18_Merchant</var>
+<status status="PASS" start="2025-11-28T09:54:51.995762" elapsed="0.000981"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:51.997387" level="INFO">${val} = 5000.00</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.996954" elapsed="0.000503"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.997571" elapsed="0.000137"/>
+</kw>
+<var name="${col}">F6_Amount_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:51.996851" elapsed="0.000923"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:51.998408" level="INFO">${val} = 764</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.997984" elapsed="0.000492"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.998590" elapsed="0.000137"/>
+</kw>
+<var name="${col}">F51_CurrecyCode_Cardholder</var>
+<status status="PASS" start="2025-11-28T09:54:51.997879" elapsed="0.001127"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:51.999816" level="INFO">${val} = 5000.00</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:51.999332" elapsed="0.000581"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.000046" elapsed="0.000160"/>
+</kw>
+<var name="${col}">F4_Amount_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:51.999195" elapsed="0.001087"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.000955" level="INFO">${val} = 764</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.000482" elapsed="0.000569"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.001188" elapsed="0.000160"/>
+</kw>
+<var name="${col}">F49_CurrecyCode_Transaction</var>
+<status status="PASS" start="2025-11-28T09:54:52.000392" elapsed="0.001027"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.002095" level="INFO">${val} = Hotels Resorts</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.001646" elapsed="0.000523"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.002288" elapsed="0.000144"/>
+</kw>
+<var name="${col}">F43_1_Card_AcceptorName</var>
+<status status="PASS" start="2025-11-28T09:54:52.001536" elapsed="0.000974"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.003134" level="INFO">${val} = 179100</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.002722" elapsed="0.000489"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.003322" elapsed="0.000131"/>
+</kw>
+<var name="${col}">Approval Code</var>
+<status status="PASS" start="2025-11-28T09:54:52.002619" elapsed="0.000895"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.004145" level="INFO">${val} = 2205</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.003731" elapsed="0.000505"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.004365" elapsed="0.000165"/>
+</kw>
+<var name="${col}">F13_Date_Transmisson</var>
+<status status="PASS" start="2025-11-28T09:54:52.003610" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.005238" level="INFO">${val} = TH</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.004881" elapsed="0.000420"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.005390" elapsed="0.000109"/>
+</kw>
+<var name="${col}">F43_3_CountryCode</var>
+<status status="PASS" start="2025-11-28T09:54:52.004726" elapsed="0.000822"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.006016" level="INFO">${val} = 05</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.005702" elapsed="0.000367"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.006150" elapsed="0.000136"/>
+</kw>
+<var name="${col}">TXN_CODE</var>
+<status status="PASS" start="2025-11-28T09:54:52.005627" elapsed="0.000762"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.007067" level="INFO">${val} = 00000015</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.006625" elapsed="0.000517"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.007251" elapsed="0.000137"/>
+</kw>
+<var name="${col}">Terminal ID</var>
+<status status="PASS" start="2025-11-28T09:54:52.006502" elapsed="0.000954"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-11-28T09:54:52.008104" level="INFO">${val} = 05</msg>
+<var>${val}</var>
+<arg>${row}</arg>
+<arg>${col}</arg>
+<arg>default=${EMPTY}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.007657" elapsed="0.000516"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${val}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.008284" elapsed="0.000148"/>
+</kw>
+<var name="${col}">POS Entry Mode</var>
+<status status="PASS" start="2025-11-28T09:54:52.007560" elapsed="0.000948"/>
+</iter>
+<var>${col}</var>
+<value>@{headers}</value>
+<status status="PASS" start="2025-11-28T09:54:51.993579" elapsed="0.014997"/>
+</for>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${EMPTY}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.008706" elapsed="0.000341"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${line_values}</arg>
+<arg>${EMPTY}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.009150" elapsed="0.000315"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-28T09:54:52.010001" level="INFO">${line_string} = 4548520800018044,5815,5000.00,764,5000.00,764,Hotels Resorts,179100,2205,TH,05,00000015,05,,</msg>
+<var>${line_string}</var>
+<arg>",".join($line_values)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.009572" elapsed="0.000510"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2025-11-28T09:54:52.011207" level="INFO" html="true">Appended to file '&lt;a href="file://d:\visaincoming-main\src\data\VisaIncoming_20251128_095451.csv"&gt;d:\visaincoming-main\src\data\VisaIncoming_20251128_095451.csv&lt;/a&gt;'.</msg>
+<arg>${full_path}</arg>
+<arg>${line_string}\n</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.010215" elapsed="0.001806"/>
+</kw>
+<var name="${row}">{'env': 'UAT2', 'F2_Primary_Account_Number': '4548520800018044', 'F18_Merchant': '5815', 'F6_Amount_Cardholder': '5000.00', 'F51_CurrecyCode_Cardholder': '764', 'F4_Amount_Transaction': '5000.00', 'F4...</var>
+<status status="PASS" start="2025-11-28T09:54:51.993086" elapsed="0.019081"/>
+</iter>
+<var>${row}</var>
+<value>@{all_rows_data}</value>
+<status status="PASS" start="2025-11-28T09:54:51.992775" elapsed="0.019477"/>
+</for>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Saved output to: ${full_path}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.012397" elapsed="0.000415"/>
+</kw>
+<arg>${processed_data}</arg>
+<status status="PASS" start="2025-11-28T09:54:51.985608" elapsed="0.027486"/>
+</kw>
+<kw name="Run Node JS Script">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-28T09:54:52.014067" level="INFO">${script_dir} = d:\visaincoming-main\src</msg>
+<var>${script_dir}</var>
+<arg>d:\\visaincoming-main\\src</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.013930" elapsed="0.000213"/>
+</kw>
+<kw name="Run Process" owner="Process">
+<msg time="2025-11-28T09:54:52.014446" level="INFO">Starting process:
+node index.js</msg>
+<msg time="2025-11-28T09:54:52.025542" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-11-28T09:54:52.136128" level="INFO">Process completed.</msg>
+<msg time="2025-11-28T09:54:52.136514" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>node</arg>
+<arg>index.js</arg>
+<arg>cwd=${script_dir}</arg>
+<arg>shell=True</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.014239" elapsed="0.122350"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nNode.js Script Output:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.136969" elapsed="0.000432"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result.stdout}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-28T09:54:52.137893" elapsed="0.000590"/>
+</kw>
+<if>
+<branch type="IF" condition="'${result.stderr}' != ''">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Node.js Script Errors:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.139478" elapsed="0.000085"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result.stderr}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.139697" elapsed="0.000065"/>
+</kw>
+<msg time="2025-11-28T09:54:52.139838" level="FAIL">Invalid IF condition: Evaluating expression "'Sharepoint.txt is error please check error in file with ..... Invalid record format in file. Line content: -(EC_002 Sheet1)\nvisa usd to thai.txt is error please check error in file with ..... Invalid record format in file. Line content: USA ' != ''" failed: SyntaxError: unterminated string literal (detected at line 1) (&lt;string&gt;, line 1)
+
+Variables in the original expression "'${result.stderr}' != ''" were resolved before the expression was evaluated. Try using "$result.stderr != ''" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</msg>
+<status status="FAIL" start="2025-11-28T09:54:52.138749" elapsed="0.002639">Invalid IF condition: Evaluating expression "'Sharepoint.txt is error please check error in file with ..... Invalid record format in file. Line content: -(EC_002 Sheet1)\nvisa usd to thai.txt is error please check error in file with ..... Invalid record format in file. Line content: USA ' != ''" failed: SyntaxError: unterminated string literal (detected at line 1) (&lt;string&gt;, line 1)
+
+Variables in the original expression "'${result.stderr}' != ''" were resolved before the expression was evaluated. Try using "$result.stderr != ''" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</branch>
+<status status="FAIL" start="2025-11-28T09:54:52.138706" elapsed="0.003007">Invalid IF condition: Evaluating expression "'Sharepoint.txt is error please check error in file with ..... Invalid record format in file. Line content: -(EC_002 Sheet1)\nvisa usd to thai.txt is error please check error in file with ..... Invalid record format in file. Line content: USA ' != ''" failed: SyntaxError: unterminated string literal (detected at line 1) (&lt;string&gt;, line 1)
+
+Variables in the original expression "'${result.stderr}' != ''" were resolved before the expression was evaluated. Try using "$result.stderr != ''" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</if>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${result.rc}</arg>
+<arg>0</arg>
+<arg>msg=Node.js script failed with return code ${result.rc}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.141945" elapsed="0.000145"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${separator}</var>
+<arg>'='*80</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.142275" elapsed="0.000075"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${separator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.142433" elapsed="0.000043"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>All files in visaincoming-main\\src\\data was settled</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.142541" elapsed="0.000036"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Please check files in "visaincoming-main\\src\\output" for move files in link:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.142639" elapsed="0.000034"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>https://ap-southeast-1.console.aws.amazon.com/s3/buckets/cdx-uat2-pci-sftp?region=ap-southeast-1&amp;prefix=crs/VISA/inbound/LGC_006_9/card/&amp;showversions=false</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.142730" elapsed="0.000035"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${separator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-11-28T09:54:52.142823" elapsed="0.000032"/>
+</kw>
+<doc>Execute the Node.js script (index.js) to process the CSV data</doc>
+<status status="FAIL" start="2025-11-28T09:54:52.013634" elapsed="0.129334">Invalid IF condition: Evaluating expression "'Sharepoint.txt is error please check error in file with ..... Invalid record format in file. Line content: -(EC_002 Sheet1)\nvisa usd to thai.txt is error please check error in file with ..... Invalid record format in file. Line content: USA ' != ''" failed: SyntaxError: unterminated string literal (detected at line 1) (&lt;string&gt;, line 1)
+
+Variables in the original expression "'${result.stderr}' != ''" were resolved before the expression was evaluated. Try using "$result.stderr != ''" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</kw>
+<status status="FAIL" start="2025-11-28T09:53:59.866610" elapsed="52.277036">Invalid IF condition: Evaluating expression "'Sharepoint.txt is error please check error in file with ..... Invalid record format in file. Line content: -(EC_002 Sheet1)\nvisa usd to thai.txt is error please check error in file with ..... Invalid record format in file. Line content: USA ' != ''" failed: SyntaxError: unterminated string literal (detected at line 1) (&lt;string&gt;, line 1)
+
+Variables in the original expression "'${result.stderr}' != ''" were resolved before the expression was evaluated. Try using "$result.stderr != ''" syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details.</status>
+</test>
+<status status="FAIL" start="2025-11-28T09:53:59.638714" elapsed="52.506724"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Mobius login" id="s1" pass="0" fail="1" skip="0">Mobius login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
