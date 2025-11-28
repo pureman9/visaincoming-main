@@ -39,8 +39,8 @@ Follow these steps to set up the project:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://gitlab.com/protocoltoto/visaincoming.git
-cd visaincoming
+git clone https://github.com/pureman9/visaincoming-main.git
+cd visaincoming-main
 ```
 
 ### Step 2: Create Virtual Environment
@@ -99,7 +99,8 @@ visaincoming-main/
 ├── src/
 │   ├── Mobius_login.robot          # Main login automation script
 │   ├── import-csvlists.robot       # CSV data import utilities
-│   └── ...
+│   ├── index.js                    # Node.js processing script
+│   └── data/                       # Input data directory
 ├── py-input/
 │   └── SOD-SIM-TEST.csv           # Test data CSV file
 ├── getApprovalCode.py             # Python script for approval codes
@@ -146,6 +147,8 @@ After running tests, Robot Framework generates:
   - User authentication with primary and secondary passwords
   - Dynamic password field handling
   - Customer navigation and search
+  - Authorization code retrieval
+  - CSV data processing with MOTOCode support
 
 ### CSV Data Import Test
 - **File:** `src/import-csvlists.robot`
@@ -155,6 +158,26 @@ After running tests, Robot Framework generates:
   - Read specific row by index
   - Handle BOM characters
   - Console output formatting
+
+## Robot Framework File Structure
+
+The main test file `Mobius_login.robot` follows this structure:
+
+### Settings
+- Libraries and imports for Selenium, Collections, OS operations, etc.
+
+### Variables
+- Test configuration (URL, credentials, timeouts, file paths)
+
+### Keywords
+- `Input secondary password` - Handle dynamic password fields
+- `Read CSV Data As List` - Read all CSV rows as dictionaries
+- `Read CSV Data Single Row` - Read specific CSV row
+- `Write Data To CSV` - Export processed data with MOTOCode
+- `Run Node JS Script` - Execute Node.js post-processing
+
+### Test Cases
+- `Visa Incoming Authorization Test` - Main automated test flow
 
 ## Troubleshooting
 
@@ -172,10 +195,13 @@ After running tests, Robot Framework generates:
 **Issue: Browser version mismatch**
 - Solution: Ensure ChromeDriver version matches your Chrome browser version
 
+**Issue: `Undefined variable` error in Robot Framework**
+- Solution: Use `Evaluate` keyword for Python expressions instead of inline evaluation
+
 ## Support
 
 For issues or questions:
-- Create an issue in the GitLab repository
+- Create an issue in the GitHub repository
 - Contact the project maintainers
 
 ## Contributing
@@ -184,7 +210,7 @@ For issues or questions:
 2. Create a feature branch: `git checkout -b feature/your-feature`
 3. Commit your changes: `git commit -am 'Add new feature'`
 4. Push to the branch: `git push origin feature/your-feature`
-5. Create a merge request
+5. Create a pull request
 
 ## License
 
@@ -197,23 +223,4 @@ This project is proprietary software. All rights reserved.
 ## Project Status
 
 Active development - regularly maintained and updated.
-
-*** File Structure Now: ***
-
-*** Settings ***
-(Libraries and imports)
-
-*** Variables ***
-(Test configuration variables)
-
-*** Keywords ***
-- Input secondary password
-- Read CSV Data As List
-- Read CSV Data Single Row
-- Write Data To CSV
-- Run Node JS Script
-
-*** Test Cases ***
-- Visa Incoming Authorization Test  ← Your main test is here now!
-
 
